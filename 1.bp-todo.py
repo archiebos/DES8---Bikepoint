@@ -1,7 +1,7 @@
 # import packages
 
 
-# Define url variable
+# API endpoint we want to extract data from
 
 
 # Send a GET request to the API

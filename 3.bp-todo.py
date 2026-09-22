@@ -18,6 +18,10 @@ filename = f'{data_dir}/{timestamp}.json'
 
 # Send a GET request to the API
 response = requests.get(url)
+# Get Status
+
+
+# Write an if statement based on the status code
 
 # Convert the JSON response into Python variable
 data = response.json()
@@ -25,3 +29,18 @@ data = response.json()
 # Open the output file and write the API data to it as JSON
 with open(filename, 'w') as file:
     json.dump(data, file)
+
+
+
+# Print the success comment
+
+
+
+# Write the elif statement - for the client side errors or server errors
+
+
+
+
+
+
+# Write the if statement - All other errors
