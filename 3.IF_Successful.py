@@ -38,6 +38,6 @@ if 200 <= status < 300:
 elif status < 200 or status >= 500:
     print(f'Status code {status}')
 
-    # For other errors, don't retry because the issue needs to be fixed
+    # For all other errors
 else:
     print(f'Error. Status code {status}. Fix it.')

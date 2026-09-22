@@ -4,6 +4,7 @@ import json
 import os
 from datetime import datetime
 
+
 # API endpoint we want to extract data from
 url = 'https://api.tfl.gov.uk/BikePoint/'
 
