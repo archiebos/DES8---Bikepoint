@@ -18,20 +18,12 @@ timestamp = datetime.now().strftime('%Y-%m-%d %H-%M-%S')
 filename = f'{data_dir}/{timestamp}.json'
 
 # Create a folder for log files if it doesn't already exist
-log_dir = 'logs'
-os.makedirs(log_dir, exist_ok=True)
-log_filename = f'{log_dir}/extract_{timestamp}.log'
+
 
 # Configure logging so messages are written to the log file
-logging.basicConfig(
-    filename=log_filename,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    level=logging.INFO
-)
+
 
 # Create the logger and confirm that it has been successfully set up
-logger = logging.getLogger()
-logger.info('Logger successfully initialised')
 
 
 # set up a retry settings in case the API fails

@@ -91,8 +91,8 @@ while attempt < max_retry:
         attempt += 1
         print(f'Status code {status}. Retrying. This was attempt {attempt}')
         # Add logger info
-
         logger.info(f'Status code {status}. Retrying. This was attempt {attempt}')
+        
 # For other errors, don't retry because the issue needs to be fixed
     else:
         print(f'Error. Status code {status}. Fix it.')
