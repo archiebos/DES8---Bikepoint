@@ -31,15 +31,10 @@ with open(filename, 'w') as file:
     json.dump(data, file)
 
 
-
 # Print the success comment
 
 
-
 # Write the elif statement - for the client side errors or server errors
-
-
-
 
 
 
