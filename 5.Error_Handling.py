@@ -37,21 +37,28 @@ while attempt < max_retry:
 
 
         # Check that the API returned data before trying to save it
+        if len(data) > 0:
+            try:
 
-        # Open the output file and write the API data to it as JSON
-        with open(filename, 'w') as file:
-            json.dump(data, file)
+            # Open the output file and write the API data to it as JSON
+                with open(filename, 'w') as file:
+                    json.dump(data, file)
 
-        # Print new response
+            # Print the success comment
+                print(f'File {filename} was successfully saved')
 
         # Handle errors that occur while creating or writing to the file
+            except Exception as e:
+                print(f'An error occurred: {e}')
+            break
 
-    # Print the success comment
-        print(f'File {filename} was successfully saved')
-        break
+        # API request succeeded, but no data was returned
+        else:
+            print('No data returned')
+            break
 
         # Retry for client-side errors or server errors
-    elif status < 200 or status >= 500:
+    elif status < 200 or status >= 300:
         print(f'Status code {status}')
         # Wait before retrying to avoid repeatedly hitting the API
         time.sleep(delay)
